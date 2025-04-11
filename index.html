@@ -11,7 +11,7 @@
     <h2 class="text-center mb-4">Book Pet Transport</h2>
     <form id="bookingForm">
       <div class="mb-3">
-        <label for="name" class="form-label">Your Name</label>
+        <label for="name" class="form-label">Owner Name</label>
         <input type="text" id="name" class="form-control" required />
       </div>
 
@@ -36,7 +36,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="notes" class="form-label">Special Instructions</label>
+        <label for="notes" class="form-label">Special Instructions (Contoh: Owner joins)</label>
         <textarea id="notes" class="form-control" rows="3"></textarea>
       </div>
 
@@ -57,15 +57,14 @@
       const notes = document.getElementById('notes').value;
 
       const message = `*New Pet Transport Booking*%0A
-Name: ${name}%0A
+Owner Name: ${name}%0A
 Pet Type: ${petType}%0A
 Pickup: ${pickup}%0A
 Drop-off: ${dropoff}%0A
 Date & Time: ${dateTime}%0A
-Instructions: ${notes}`;
+Special Instructions: ${notes}`;
 
-      // Replace this with your actual WhatsApp number (no + or dashes)
-      const phoneNumber = "6281210495739";
+      const phoneNumber = "6285121115871";
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     });
